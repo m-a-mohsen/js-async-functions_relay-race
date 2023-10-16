@@ -24,6 +24,18 @@ startRaceButton.addEventListener("click", () => {
    **/
 
   // --v-- write your code here --v--
+  // ---- option 01 -------
+  // animateRunner(runner1)
+  //   .then(() => animateRunner(runner2))
+  //   .then(() => animateRunner(runner3))
+
+  // ---- option 02 -------
+  async function race() {
+    await animateRunner(runner1);
+    await animateRunner(runner2);
+    await animateRunner(runner3);
+  }
+  race();
 
   // --^-- write your code here --^--
 
